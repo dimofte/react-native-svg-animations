@@ -4,7 +4,7 @@
 
 ## Dependencies
 
-* `svg-path-properties` 
+* `svg-path-properties`
 * `react-native-svg`
 
 ## Installation
@@ -48,6 +48,7 @@ See <a href="https://github.com/73R3WY/react-native-svg-animations/tree/master/e
 
 ```javascript
 import { AnimatedSVGPath } from 'react-native-svg-animations';
+import { Easing } from 'react-native';
 ```
 
 ...
@@ -62,6 +63,7 @@ import { AnimatedSVGPath } from 'react-native-svg-animations';
       width={400}
       scale={0.75}
       delay={100}
+      easing={Easing.inOut(Easing.ease)}
       d={d}
       loop={false}
     />
@@ -76,6 +78,7 @@ where the properties are:
 * `width` - the width of the base SVG. (defaults to screen viewport width)
 * `scale` - the scale of the output SVG based on the width and height of the base SVG. (defaults to 1.0 or 100%)
 * `delay` - time in `ms` before starting animation. (defaults to 1000ms or 1s)
+* `easing` - easing functions, see the official docs from [Animated](https://facebook.github.io/react-native/docs/easing)
 * `duration` - time in `ms` to complete the path drawing from starting point to ending point. (defaults to 1000ms or 1s)
 * `fill` - the color fill of the closed path. (defaults to none)
 * `loop` - whether the animation loops infinitely. (defaults to true)
